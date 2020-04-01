@@ -6,7 +6,7 @@ const sequelize = new Sequelize('daytrippin','postgres','password',{
 })
     sequelize.authenticate().then(
         function() {
-            console.log("Connected to workoutlog postgres datbase");
+            console.log("Connected to daytrippin postgres datbase");
         },
         function(err){
             console.log(err);

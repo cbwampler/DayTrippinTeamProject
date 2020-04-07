@@ -1,9 +1,7 @@
 module.exports = function(sequelize,DataTypes){
-    return sequelize.define('events',{
-        
-        eventID:DataTypes.INTEGER,
+    return sequelize.define('event',{
         owner:DataTypes.INTEGER,
-        eventName:DataTypes.STRING,
-        eventAddress:DataTypes.STRING
+        itineraryName:DataTypes.STRING,
+        eventDetails:DataTypes.TEXT
     })
 }

@@ -8,7 +8,7 @@ var sequelize = require('./db')
 var bodyParser = require("body-parser");
 var user = require('./controllers/usercontroller')
 var events = require ('./controllers/eventscontroller')
-var itineraries = require ('./controllers/intinerarycontroller')
+var placetypes = require ('./controllers/placetypescontroller')
 
 sequelize.sync()
 app.use(bodyParser.json());
@@ -18,7 +18,7 @@ app.use('/api/user', user )
 
 app.use(require('./middleware/validate-session'))
 
-app.use('/itineraries', itineraries)
+app.use('/placetypes', placetypes)
 app.use('/events', events);
 
 app.listen(3000, function(){

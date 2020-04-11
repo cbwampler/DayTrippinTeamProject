@@ -105,7 +105,7 @@ router.delete('/delete/:id', function (req,res){
             owner: userid}
     }).then(
         function deleteItinerarySuccess(){
-            res.send("you removed an itinerary");
+            res.send(200,{message: "this itinerary was removed"})
         },
         function deleteItineraryError(err){
             res.send(500,err.message);
